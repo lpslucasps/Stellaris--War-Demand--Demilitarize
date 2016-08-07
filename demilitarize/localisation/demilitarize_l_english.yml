@@ -1,0 +1,12 @@
+﻿l_english:
+ ####################################
+ # War Demand: Demilitarize
+ ####################################
+ war_demand_demilitarize_header:1 "§HDemilitarize§!"
+ war_demand_demilitarize_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_tooltip_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_content:2 "[parameter:country.GetName] will have its Naval Capacity reduced by §Y50%§! for §Y10§! years. We will also gain §G100§! £influence ."
+ war_demand_demilitarize_tooltip_proper_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_proper_content:1 "$war_demand_demilitarize_tooltip_content$"
+ forced_demilitarization:0 "Forced Demilitarization"
+ forced_demilitarizatin_desc:0 "We were forced to decrease our naval capacity by another empire"

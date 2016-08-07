@@ -1,0 +1,76 @@
+#########################################################################
+# War Demand: Demilitarize War Demand Types
+##########################################################################
+
+demilitarize = {
+	execution_order = 1
+
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+
+	warscore_cost = {
+		base = 50
+
+		modifier = {
+			add = 10
+			has_ethic = "ethic_militarist"
+		}
+
+		modifier = {
+			add = 20
+			has_ethic = "ethic_fanatic_militarist"
+		}
+
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+	}
+
+	potential = {
+		parameter:country = {
+			is_country = from
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	proposable = {
+		custom_tooltip_fail = {
+      text = "war_demand_war_philosophy"
+      NOT = { has_policy_flag = unrestricted_wars }
+    }
+	}
+
+	effect = {
+		fromfromfrom = {
+			add_influence = 100
+		}
+		parameter:country = {
+			add_modifier = { modifier = forced_demilitarization days = 3600 }
+		}
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			has_ethic = "ethic_pacifist"
+		}
+
+    modifier = {
+      factor = 100
+      has_ethic = "ethic_fanatic_pacifist"
+    }
+	}
+}
