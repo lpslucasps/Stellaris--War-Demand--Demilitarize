@@ -1,12 +1,55 @@
 ﻿l_english:
  ####################################
- # War Demand: Demilitarize
+ # War Demand: Demilitarize,
+ # by Lucas Pinheiro Silva
  ####################################
- war_demand_demilitarize_header:1 "§HDemilitarize§!"
+ ### War Demands
+ # Demilitarize for 10 years
+ war_demand_demilitarize_header:1 "§HDemilitarize for 10 Years§!"
  war_demand_demilitarize_subtext:0 "[parameter:country.GetName]"
  war_demand_demilitarize_tooltip_header:0 "$war_demand_demilitarize_header$"
  war_demand_demilitarize_tooltip_content:2 "[parameter:country.GetName] will have its Naval Capacity reduced by §Y50%§! for §Y10§! years. We will also gain §G100§! £influence ."
  war_demand_demilitarize_tooltip_proper_header:0 "$war_demand_demilitarize_header$"
  war_demand_demilitarize_tooltip_proper_content:1 "$war_demand_demilitarize_tooltip_content$"
+ # Demilitarize for 15 years
+ war_demand_demilitarize_15_years_header:1 "§HDemilitarize for 15 Years§!"
+ war_demand_demilitarize_15_years_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_15_years_tooltip_header:0 "$war_demand_demilitarize_15_years_header$"
+ war_demand_demilitarize_15_years_tooltip_content:2 "[parameter:country.GetName] will have its Naval Capacity reduced by §Y50%§! for §Y15§! years. We will also gain §G100§! £influence ."
+ war_demand_demilitarize_15_years_tooltip_proper_header:0 "$war_demand_demilitarize_15_years_header$"
+ war_demand_demilitarize_15_years_tooltip_proper_content:1 "$war_demand_demilitarize_15_years_tooltip_content$"
+ # Demilitarize for 30 years
+ war_demand_demilitarize_30_years_header:1 "§HDemilitarize for 30 Years§!"
+ war_demand_demilitarize_30_years_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_30_years_tooltip_header:0 "$war_demand_demilitarize_30_years_header$"
+ war_demand_demilitarize_30_years_tooltip_content:2 "[parameter:country.GetName] will have its Naval Capacity reduced by §Y50%§! for §Y30§! years. We will also gain §G100§! £influence ."
+ war_demand_demilitarize_30_years_tooltip_proper_header:0 "$war_demand_demilitarize_30_years_header$"
+ war_demand_demilitarize_30_years_tooltip_proper_content:1 "$war_demand_demilitarize_30_years_tooltip_content$"
+ # Demilitarize Permanently
+ war_demand_demilitarize_permanently_header:1 "§HDemilitarize Permanently§!"
+ war_demand_demilitarize_permanently_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_permanently_tooltip_header:0 "$war_demand_demilitarize_permanently_header$"
+ war_demand_demilitarize_permanently_tooltip_content:2 "[parameter:country.GetName] will have its Nava Capacity reduced by §Y50%§! and will become our Demilitarized Subject. Demilitarized Subjects are mostly independent but cost §R1§! £influence  per month and are protected by their Overlord."
+ war_demand_demilitarize_permanently_tooltip_proper_header:0 "$war_demand_demilitarize_permanently_header$"
+ war_demand_demilitarize_permanently_tooltip_proper_content:1 "$war_demand_demilitarize_permanently_tooltip_content$"
+ # Custom tooltips
+ war_demand_demilitarize_demilitarized:1 "This Empires is already in the process of demilitarization"
+ war_demand_demilitarize_independent:1 "Subject Empires can only be demilitarized by their Overlords"
+ war_demand_demilitarize_requires_independence:1 "Only independent Empires can make this demand"
+ war_demand_demilitarization_already_proposed:1 "You are already proposing the demilitarization of this Empire"
+ war_demand_demilitarize_country_no_planets:1 "All the Empire's planets will be ceded, nothing left to demilitarize"
+ war_demand_demilitarize_country_not_opponent:1 "This Empire is no longer an opponent"
+ war_demand_demilitarize_country_no_overlords:1 "No one can take this Empire as their Demilitarized Subject"
+ war_demand_demilitarize_country_wrong_type:1 "Empires of this type cannot be Subjects"
+ war_demand_demilitarize_country_no_vassals_of_vassals:2 "Only independent Empires are allowed to have Subjects"
+ # Subject type
+ SUBJECT_demilitarized_subject:0 "Demilitarized Subject"
+ SUBJECT_DESC_demilitarized_subject:0 "Demilitarized Subjects are mostly independent but have their Naval Capacity reduced by 50%, cost §R1§! £influence  per month and are protected by their Overlord. They can become Stable Demilitarized Subjects after approximately 30 years of demilitarization."
+ SUBJECT_stable_demilitarized_subject:0 "Stable Demilitarized Subject"
+ SUBJECT_DESC_stable_demilitarized_subject:0 "Stable Demilitarized Subjects have a long, strong and trustful relationship with their Overlord. They pay §Y15%§! of their monthly Energy Credits and Minerals in tribute to their Overlord and give them §G1§! £influence  monthly.
+ # Modifiers
  forced_demilitarization:0 "Forced Demilitarization"
- forced_demilitarizatin_desc:0 "We were forced to decrease our naval capacity by another empire"
+ forced_demilitarization_desc:0 "We were forced to decrease our naval capacity by another empire"
+ permanent_demilitarization:0 "Permanent Demilitarization"
+ permanent_demilitarization_desc:0 "We were forced to decrease our naval capacity by our Overlord"
+ opinion_stable_relationship:0 "Stable Relationship"

@@ -3,6 +3,17 @@
 # by Lucas Pinheiro Silva
 ##########################################################################
 
-forced_demilitarization = {
+permanent_demilitarization = {
+  potential = {
+    always = yes
+  }
+
+  trigger = {
+    OR = {
+     is_subject_type = "demilitarized_subject"
+     is_subject_type = "stable_demilitarized_subject"
+    }
+  }
+
   navy_size_mult = -0.50
 }

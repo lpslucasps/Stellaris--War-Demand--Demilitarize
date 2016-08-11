@@ -1,5 +1,6 @@
 #########################################################################
 # War Demand: Demilitarize War Demand Types
+# by Lucas Pinheiro Silva
 ##########################################################################
 
 demilitarize = {
@@ -42,7 +43,15 @@ demilitarize = {
 	}
 
 	possible = {
-		always = yes
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
 	}
 
 	proposable = {
@@ -50,6 +59,38 @@ demilitarize = {
       text = "war_demand_war_philosophy"
       NOT = { has_policy_flag = unrestricted_wars }
     }
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_demilitarized"
+			parameter:country = {
+				NOT = { has_modifier = "forced_demilitarization" }
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_independent"
+			parameter:country = {
+				OR = {
+					NOT = { exists = overlord }
+					overlord = { is_same_value = fromfromfrom }
+				}
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_requires_independence"
+			NOT = { exists = overlord }
+		}
+
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarization_already_proposed"
+				war_demand_counter = {
+					type = demilitarization_already_proposed
+					value < 1
+				}
+			}
+		}
 	}
 
 	effect = {
@@ -58,6 +99,18 @@ demilitarize = {
 		}
 		parameter:country = {
 			add_modifier = { modifier = forced_demilitarization days = 3600 }
+			fromfromfrom = {
+				guarantee_country = {
+					target = prev
+				}
+			}
+		}
+	}
+
+	counters = {
+		demilitarization_already_proposed = {
+			context = parameter:country
+			value = { base = 1 }
 		}
 	}
 
@@ -73,4 +126,521 @@ demilitarize = {
       has_ethic = "ethic_fanatic_pacifist"
     }
 	}
+}
+
+demilitarize_15_years = {
+	execution_order = 1
+
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+
+	warscore_cost = {
+		base = 70
+
+		modifier = {
+			add = 10
+			has_ethic = "ethic_militarist"
+		}
+
+		modifier = {
+			add = 20
+			has_ethic = "ethic_fanatic_militarist"
+		}
+
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+	}
+
+	potential = {
+		parameter:country = {
+			is_country = from
+		}
+	}
+
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+
+	proposable = {
+		custom_tooltip_fail = {
+      text = "war_demand_war_philosophy"
+      NOT = { has_policy_flag = unrestricted_wars }
+    }
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_demilitarized"
+			parameter:country = {
+				NOT = { has_modifier = "forced_demilitarization" }
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_independent"
+			parameter:country = {
+				OR = {
+					NOT = { exists = overlord }
+					overlord = { is_same_value = fromfromfrom }
+				}
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_requires_independence"
+			NOT = { exists = overlord }
+		}
+
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarization_already_proposed"
+				war_demand_counter = {
+					type = demilitarization_already_proposed
+					value < 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		fromfromfrom = {
+			add_influence = 100
+		}
+		parameter:country = {
+			add_modifier = { modifier = forced_demilitarization days = 5400 }
+			fromfromfrom = {
+				guarantee_country = {
+					target = prev
+				}
+			}
+		}
+	}
+
+	counters = {
+		demilitarization_already_proposed = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			has_ethic = "ethic_pacifist"
+		}
+
+    modifier = {
+      factor = 100
+      has_ethic = "ethic_fanatic_pacifist"
+    }
+	}
+}
+
+demilitarize_30_years = {
+	execution_order = 1
+
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+
+	warscore_cost = {
+		base = 100
+
+		modifier = {
+			add = 10
+			has_ethic = "ethic_militarist"
+		}
+
+		modifier = {
+			add = 20
+			has_ethic = "ethic_fanatic_militarist"
+		}
+
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+	}
+
+	potential = {
+		parameter:country = {
+			is_country = from
+		}
+	}
+
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+
+	proposable = {
+		custom_tooltip_fail = {
+      text = "war_demand_war_philosophy"
+      NOT = { has_policy_flag = unrestricted_wars }
+    }
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_demilitarized"
+			parameter:country = {
+				NOT = { has_modifier = "forced_demilitarization" }
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_independent"
+			parameter:country = {
+				OR = {
+					NOT = { exists = overlord }
+					overlord = { is_same_value = fromfromfrom }
+				}
+			}
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_requires_independence"
+			NOT = { exists = overlord }
+		}
+
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarization_already_proposed"
+				war_demand_counter = {
+					type = demilitarization_already_proposed
+					value < 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		fromfromfrom = {
+			add_influence = 100
+		}
+		parameter:country = {
+			add_modifier = { modifier = forced_demilitarization days = 10800 }
+			fromfromfrom = {
+				guarantee_country = {
+					target = prev
+				}
+			}
+		}
+	}
+
+	counters = {
+		demilitarization_already_proposed = {
+			context = parameter:country
+			value = { base = 1 }
+		}
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			has_ethic = "ethic_pacifist"
+		}
+
+    modifier = {
+      factor = 100
+      has_ethic = "ethic_fanatic_pacifist"
+    }
+	}
+}
+
+demilitarize_permanently = {
+	execution_order = 1
+
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+
+	warscore_cost = {
+		base = 40
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 10
+			calc = planets_in_country
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.5
+			calc = pop_count
+		}
+
+		scaled_modifier = {
+			scope = parameter:country
+			div = 0.05
+			calc = planets_in_country
+		}
+
+		modifier = {
+			factor = 1.5
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+
+		modifier = {
+			factor = 0.9
+			has_ethic = "ethic_pacifist"
+		}
+
+		modifier = {
+			factor = 0.8
+			has_ethic = "ethic_fanatic_pacifist"
+		}
+
+		# Ruler Trait - Warlike
+		modifier = {
+			factor = 1.05
+			custom_tooltip = {
+				text = "war_demand_trait_warlike"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_warlike }
+			}
+		}
+
+		# Ruler Trait - Expansionist
+		modifier = {
+			factor = 1.10
+			custom_tooltip = {
+				text = "war_demand_trait_expansionist"
+				exists = ruler
+				ruler = { has_trait = trait_ruler_expansionist }
+			}
+		}
+
+		# Tech - Galactic Ambitions
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_galactic_ambitions"
+				has_technology = tech_galactic_ambitions
+			}
+		}
+
+		# Tech - Manifest Destiny
+		modifier = {
+			factor = 0.95
+			custom_tooltip = {
+				text = "war_demand_tech_manifest_destiny"
+				has_technology = tech_manifest_destiny
+			}
+		}
+	}
+
+	potential = {
+		parameter:country = {
+			is_country_type = default
+			NOT = { exists = overlord }
+		}
+
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_country_not_opponent"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								is_war_participant = {
+									who = prevprev
+									side = prev
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = from
+						}
+					}
+
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_country_no_overlords"
+			parameter:country = {
+				OR = {
+					AND = {
+						exists = fromfrom
+						from = {
+							from = {
+								count_war_participants = {
+									side = root
+									limit = {
+										parameter:country = {
+											can_be_subject = {
+												overlord = prev
+												subject_type = vassal
+											}
+										}
+									}
+									count > 0
+								}
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						count_potential_war_participants = {
+							attacker = root
+							defender = from
+							side = from
+
+							limit = {
+								parameter:country = {
+									can_be_subject = {
+										overlord = root
+										subject_type = vassal
+									}
+								}
+							}
+
+							count > 0
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_vassalize_country_missing_tech_all"
+			any_country = {
+				has_technology = tech_xeno_supremacy
+				OR = {
+					AND = {
+						exists = fromfrom
+						fromfrom = {
+							is_war_participant = {
+								who = prev
+								side = root
+							}
+						}
+					}
+					AND = {
+						NOT = { exists = fromfrom }
+						would_join_war = {
+							attacker = root
+							defender = from
+							side = root
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_demilitarize_country_wrong_type"
+			parameter:country = {
+				is_country_type = default
+			}
+		}
+		custom_tooltip_fail = {
+			text = "war_demand_cede_planet_no_vassals"
+			NOT = { exists = overlord }
+		}
+	}
+
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarize_country_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_demilitarize_country_no_vassals_of_vassals"
+				NOT = { exists = overlord }
+			}
+			custom_tooltip_fail = {
+				text = "war_demand_vassalize_country_missing_tech"
+				has_technology = tech_xeno_supremacy
+			}
+		}
+	}
+
+	proposable = {
+		custom_tooltip_fail = {
+			text = "war_demand_war_philosophy"
+			NOT = { has_policy_flag = unrestricted_wars }
+		}
+
+		parameter:country = {
+			can_be_subject = {
+				overlord = fromfromfrom
+				subject_type = vassal
+			}
+		}
+	}
+
+	effect = {
+		parameter:country = {
+			remove_modifier = forced_demilitarization
+			set_timed_country_flag = {
+				flag = permanent_demilitarization_proccess
+				days = 10800
+			}
+			set_subject_of = {
+				who = fromfromfrom
+				subject_type = "demilitarized_subject"
+			}
+		}
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			has_ethic = "ethic_pacifist"
+		}
+
+    modifier = {
+      factor = 100
+      has_ethic = "ethic_fanatic_pacifist"
+    }
+	}
+
 }

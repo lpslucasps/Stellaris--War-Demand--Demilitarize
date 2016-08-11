@@ -1,0 +1,44 @@
+#########################################################################
+# War Demand: Demilitarize Events
+# by Lucas Pinheiro Silva
+##########################################################################
+
+namespace = demilitarize
+
+country_event = {
+  id = demilitarize.1000
+
+  is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    every_subject = {
+      limit = {
+        is_subject_type = "demilitarized_subject"
+        NOT = { has_country_flag = permanent_demilitarization_proccess }
+      }
+      set_subject_of = {
+        who = PREV
+        subject_type = stable_demilitarized_subject
+      }
+      add_opinion_modifier = {
+        who = PREV
+        modifier = opinion_stable_relationship
+      }
+    }
+  }
+}
+
+event = {
+  id = demilitarize.1001
+
+  is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    every_country = {
+      limit = { any_subject = { is_subject_type = "demilitarized_subject" } }
+      country_event = { id = demilitarize.1000 }
+    }
+  }
+}

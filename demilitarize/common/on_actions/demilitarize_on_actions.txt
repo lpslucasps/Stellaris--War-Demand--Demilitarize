@@ -1,8 +1,10 @@
 #########################################################################
-# War Demand: Demilitarize Static Modifiers
+# War Demand: Demilitarize On Actions
 # by Lucas Pinheiro Silva
 ##########################################################################
 
-forced_demilitarization = {
-  navy_size_mult = -0.50
+on_bi_yearly_pulse = {
+  events = {
+    demilitarize.1001
+  }
 }

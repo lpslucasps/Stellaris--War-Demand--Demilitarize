@@ -1,0 +1,63 @@
+A [strike]very simple[/strike] not so simple anymore and, I hope, useful mod. Now you can demand the demilitarization of your enemies. Empires that are forcefully demilitarized have their Naval Capacity halved.
+
+There are four "Demilitarize" war demands, divided into two different types:
+
+[h1]Temporary[/h1]
+[list][*][b]Demilitarize for 10 Years[/b]
+[list][*]Base cost: 50[/list]
+[*][b]Demilitarize for 15 Years[/b]
+[list][*]Base cost: 70[/list]
+[*][b]Demilitarize for 30 Years[/b]
+[list][*]Base cost: 100[/list]
+[*][b]Effects for all of them:[/b]
+[list][*]Naval Capacity of the loser decreased by 50% for the duration of the demand
+[*]+100 influence to the winner
+[*]Demand not available to Empires with Unrestricted War policy
+[*]Base cost modifiers:
+[list][*]-20 for Fanatic Pacifists
+[*]-10 for Pacifists
+[*]+10 for Militarists
+[*]+20 for Fanatic Militarists[/list]
+[/list][/list]
+[h1]Permanent[/h1]
+[list][*][b]Demilitarize Permanently[/b]
+[list][*]A special kind of subjugation: the loser will become your Demilitarized Subject
+[list][*]Demilitarized Subjects have a permament 50% reduction to their Naval Capacity, unless they are released from subjectage
+[*]They are mostly independent, being able to do diplomatic actions and expand
+[*]If attacked, they will automatically call their Overlord
+[*]They cost 1 influence per month[/list]
+[*]After approximately 30 years, Demilitarized Subjects become Stable Demilitarized Subects
+[list][*]Stable Demilitarized subjects give you 15% of their monthly Minerals and Energy Credits
+[*]They receive the Stable Relationship opinion modifier (+100)
+[*]You get +1 influence monthly per Stable Demilitarized Subject[/list]
+[*]Demand not available to Empires with Unrestricted War policy
+[*]Base cost: 40
+[list][*]Cost scales with the size of the opponent (total population and number of planets)
+[*]-5% for Pacifists
+[*]-10% for Fanatic Pacifists
+[*]+50% for Militarists
+[*]+100% for Fanatic Militarist[/list][/list][/list]
+
+The AI can use these demands. Empires with the Pacifist or Fanatical Pacifist ethos are most likely to use them.
+
+[h1]PLANNED FEATURES[/h1]
+I'm open to suggestions! If you'd like to add new
+features or translate the mod to other languages, please,
+[url=https://github.com/lpslucasps/Stellaris--War-Demand--Demilitarize]Fork Me
+on Github[/url].
+
+[h1]LIMITATIONS/KNOWN ISSUES[/h1]
+[list][*]Currently, the temporary war demands make the winner automatically guarantee the independence of the loser, but nothing can stop him from breaking the guarantee. The diplomatic actions are frustratingly limited and it seems there's no way to set a minimum amount of years to revoke the guarantee.[/list]
+
+[h1]COMPATIBILITY[/h1]
+No vanilla files were harmed in the creation of this mod. It should be compatible with any other mod.
+
+Compatible with games in progress.
+
+[h1]CHANGELOG[/h1]
+[list][*]11/08/2016
+[list][*]Version 2.0 released, with new demands and a new subject type[/list][/list]
+
+[I]Feedback, specially balance suggestions, much appreciated.[/I]
+
+[i]If you like this mod, give my other (and bigger) mod a shot: [URL=http://steamcommunity.com/sharedfiles/filedetails/?id=736632183]Better Subjects[/URL].[/i]

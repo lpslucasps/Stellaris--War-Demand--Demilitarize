@@ -1,0 +1,15 @@
+#########################################################################
+# Demilitarize Opinion Modifiers
+# by Lucas Pinheiro Silva
+##########################################################################
+
+opinion_stable_relationship = {
+  opinion = {
+    base = 0
+
+    modifier = {
+      add = 100
+      is_subject_type = "stable_demilitarized_subject"
+    }
+  }
+}

@@ -1,8 +1,11 @@
 #########################################################################
-# War Demand: Demilitarize Static Modifiers
+# War Demand: Demilitarize War Demand Counters
 # by Lucas Pinheiro Silva
 ##########################################################################
 
-forced_demilitarization = {
-  navy_size_mult = -0.50
+demilitarization_already_proposed = {
+  scope = country
+  initial = {
+    base = 0
+  }
 }
