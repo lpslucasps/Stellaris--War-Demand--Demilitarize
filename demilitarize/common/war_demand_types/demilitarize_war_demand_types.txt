@@ -619,9 +619,10 @@ demilitarize_permanently = {
 	effect = {
 		parameter:country = {
 			remove_modifier = forced_demilitarization
+			set_country_flag = permanent_demilitarization_proccess
 			set_timed_country_flag = {
-				flag = permanent_demilitarization_proccess
-				days = 10800
+				flag = stabilization_phase_1
+				days = 1800
 			}
 			set_subject_of = {
 				who = fromfromfrom

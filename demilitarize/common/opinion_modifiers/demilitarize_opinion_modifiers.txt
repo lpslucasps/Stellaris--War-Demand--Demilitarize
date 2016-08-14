@@ -13,3 +13,15 @@ opinion_stable_relationship = {
     }
   }
 }
+
+opinion_shaky_relationship = {
+  opinion = {
+    base = -100
+  }
+
+  unique = yes
+  monthly = yes
+  decay = {
+    base = 2
+  }
+}

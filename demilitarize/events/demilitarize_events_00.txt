@@ -6,24 +6,176 @@
 namespace = demilitarize
 
 country_event = {
+  id = demilitarize.100
+
+  is_triggered_only = yes
+
+  title = "demilitarize.100.name"
+  desc = "demilitarize.100.desc"
+  picture = GFX_evt_galactic_senate
+  show_sound = event_conversation
+
+  option = {
+    name = demilitarize.100.a
+    event_target:DemilitarizedSubject = {
+      remove_country_flag = permanent_demilitarization_proccess
+      set_country_flag = permanent_demilitarization_process_2
+      set_timed_country_flag = {
+        flag = stabilization_phase_2
+        days = 3600
+      }
+    }
+  }
+
+  option = {
+    name = demilitarize.100.b
+    add_influence = -100
+    event_target:DemilitarizedSubject = {
+      set_timed_country_flag = {
+        flag = stabilization_phase_1
+        days = 3600
+      }
+    }
+  }
+
+  option = {
+    name = demilitarize.100.c
+    event_target:DemilitarizedSubject = {
+      set_timed_country_flag = {
+        flag = stabilization_phase_1
+        days = 3600
+      }
+      add_opinion_modifier = {
+        who = event_target:DemilitarizedOverlord
+        modifier = opinion_shaky_relationship
+      }
+    }
+  }
+
+}
+
+country_event = {
+  id = demilitarize.101
+
+  is_triggered_only = yes
+
+  title = "demilitarize.101.name"
+  desc = "demilitarize.101.desc"
+  picture = GFX_evt_galactic_senate
+  show_sound = event_conversation
+
+  option = {
+    name = demilitarize.101.a
+    event_target:DemilitarizedSubject = {
+      remove_country_flag = permanent_demilitarization_process_2
+      set_country_flag = permanent_demilitarization_process_3
+      set_timed_country_flag = {
+        flag = stabilization_phase_3
+        days = 5400
+      }
+    }
+  }
+
+  option = {
+    name = demilitarize.101.b
+    add_influence = -100
+    event_target:DemilitarizedSubject = {
+      set_timed_country_flag = {
+        flag = stabilization_phase_2
+        days = 5400
+      }
+    }
+  }
+
+  option = {
+    name = demilitarize.101.c
+    event_target:DemilitarizedSubject = {
+      set_timed_country_flag = {
+        flag = stabilization_phase_2
+        days = 5400
+      }
+      add_opinion_modifier = {
+        who = event_target:DemilitarizedOverlord
+        modifier = opinion_shaky_relationship
+      }
+    }
+  }
+
+}
+
+country_event = {
+  id = demilitarize.102
+
+  is_triggered_only = yes
+
+  title = "demilitarize.102.name"
+  desc = "demilitarize.102.desc"
+  picture = GFX_evt_galactic_senate
+  show_sound = event_conversation
+
+  option = {
+    name = demilitarize.102.a
+    event_target:DemilitarizedSubject = {
+      remove_country_flag = permanent_demilitarization_process_3
+      set_subject_of = {
+        who = event_target:DemilitarizedOverlord
+        subject_type = stable_demilitarized_subject
+      }
+      remove_opinion_modifier = {
+        who = event_target:DemilitarizedOverlord
+        modifier = opinion_shaky_relationship
+      }
+      add_opinion_modifier = {
+        who = event_target:DemilitarizedOverlord
+        modifier = opinion_stable_relationship
+      }
+    }
+  }
+
+}
+
+country_event = {
   id = demilitarize.1000
 
   is_triggered_only = yes
   hide_window = yes
 
   immediate = {
+    save_event_target_as = DemilitarizedOverlord
+
     every_subject = {
-      limit = {
-        is_subject_type = "demilitarized_subject"
-        NOT = { has_country_flag = permanent_demilitarization_proccess }
+      limit = { is_subject_type = "demilitarized_subject" }
+
+      save_event_target_as = DemilitarizedSubject
+
+      if = {
+        limit = {
+          has_country_flag = permanent_demilitarization_proccess
+          NOT = { has_country_flag = stabilization_phase_1 }
+        }
+        PREV = {
+          country_event = { id = demilitarize.100 }
+        }
       }
-      set_subject_of = {
-        who = PREV
-        subject_type = stable_demilitarized_subject
+
+      if = {
+        limit = {
+          has_country_flag = permanent_demilitarization_process_2
+          NOT = { has_country_flag = stabilization_phase_2 }
+        }
+        PREV = {
+          country_event = { id = demilitarize.101 }
+        }
       }
-      add_opinion_modifier = {
-        who = PREV
-        modifier = opinion_stable_relationship
+
+      if = {
+        limit = {
+          has_country_flag = permanent_demilitarization_process_3
+          NOT = { has_country_flag = stabilization_phase_3 }
+        }
+        PREV = {
+          country_event = { id = demilitarize.102 }
+        }
       }
     }
   }

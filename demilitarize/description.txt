@@ -22,7 +22,7 @@ There are four "Demilitarize" war demands, divided into two different types:
 [h1]Permanent[/h1]
 [list][*][b]Demilitarize Permanently[/b]
 [list][*]A special kind of subjugation: the loser will become your Demilitarized Subject
-[list][*]Demilitarized Subjects have a permament 50% reduction to their Naval Capacity, unless they are released from subjectage
+[list][*]Demilitarized Subjects have a permament reduction to their Naval Capacity, unless they are released from subjectage
 [*]They are mostly independent, being able to do diplomatic actions and expand
 [*]If attacked, they will automatically call their Overlord
 [*]They cost 1 influence per month[/list]
@@ -42,9 +42,7 @@ The AI can use these demands. Empires with the Pacifist or Fanatical Pacifist et
 
 [h1]PLANNED FEATURES[/h1]
 I'm open to suggestions! If you'd like to add new
-features or translate the mod to other languages, please,
-[url=https://github.com/lpslucasps/Stellaris--War-Demand--Demilitarize]Fork Me
-on Github[/url].
+features or translate the mod to other languages, please, [url=https://github.com/lpslucasps/Stellaris--War-Demand--Demilitarize]Fork Me on Github[/url].
 
 [h1]LIMITATIONS/KNOWN ISSUES[/h1]
 [list][*]Currently, the temporary war demands make the winner automatically guarantee the independence of the loser, but nothing can stop him from breaking the guarantee. The diplomatic actions are frustratingly limited and it seems there's no way to set a minimum amount of years to revoke the guarantee.[/list]
@@ -55,7 +53,9 @@ No vanilla files were harmed in the creation of this mod. It should be compatibl
 Compatible with games in progress.
 
 [h1]CHANGELOG[/h1]
-[list][*]11/08/2016
+[list][*]13/08/2016
+[list][*]Added some fluff to the stabilization process of Demilitarized Subjects. Two events should make the process more gradual, and you can even interrupt the process.[/list]
+[*]11/08/2016
 [list][*]Version 2.0 released, with new demands and a new subject type[/list][/list]
 
 [I]Feedback, specially balance suggestions, much appreciated.[/I]

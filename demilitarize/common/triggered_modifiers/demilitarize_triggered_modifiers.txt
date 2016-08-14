@@ -3,15 +3,44 @@
 # by Lucas Pinheiro Silva
 ##########################################################################
 
-permanent_demilitarization = {
+permanent_demilitarization_1 = {
+  potential = {
+    always = yes
+  }
+
+  trigger = {
+    is_subject_type = "demilitarized_subject"
+    has_country_flag = permanent_demilitarization_proccess
+  }
+
+  navy_size_mult = -0.90
+}
+
+permanent_demilitarization_2 = {
+  potential = {
+    always = yes
+  }
+
+  trigger = {
+    is_subject_type = "demilitarized_subject"
+    has_country_flag = permanent_demilitarization_process_2
+  }
+
+  navy_size_mult = -0.75
+}
+
+permanent_demilitarization_3 = {
   potential = {
     always = yes
   }
 
   trigger = {
     OR = {
-     is_subject_type = "demilitarized_subject"
-     is_subject_type = "stable_demilitarized_subject"
+      is_subject_type = "stable_demilitarized_subject"
+      AND = {
+        is_subject_type = "demilitarized_subject"
+        has_country_flag = permanent_demilitarization_process_3
+      }
     }
   }
 
