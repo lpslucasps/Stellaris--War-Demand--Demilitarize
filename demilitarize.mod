@@ -7,4 +7,4 @@ tags={
 }
 picture="demilitarize.jpg"
 remote_file_id="738322403"
-supported_version="1.2.*"
+supported_version="1.4.*"
