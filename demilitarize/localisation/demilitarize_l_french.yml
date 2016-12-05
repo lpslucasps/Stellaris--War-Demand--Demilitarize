@@ -1,0 +1,75 @@
+﻿l_french:
+ ####################################
+ # War Demand: Demilitarize,
+ # by Lucas Pinheiro Silva
+ # french translation by lquattro
+ ####################################
+ ### War Demands
+ # Demilitarize for 10 years
+ war_demand_demilitarize_header:1 "§HDémilitarisée pour 10 ans§!"
+ war_demand_demilitarize_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_tooltip_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_content:2 "[parameter:country.GetName] aura sa capacité navale réduite de §Y50%§! pour §Y10§! ans. Nous gagnerons également §G100§! en £influence ."
+ war_demand_demilitarize_tooltip_proper_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_proper_content:1 "$war_demand_demilitarize_tooltip_content$"
+ # Demilitarize for 15 years
+ war_demand_demilitarize_15_years_header:1 "§HDemilitarisé pour 15 ans§!"
+ war_demand_demilitarize_15_years_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_15_years_tooltip_header:0 "$war_demand_demilitarize_15_years_header$"
+ war_demand_demilitarize_15_years_tooltip_content:2 "[parameter:country.GetName] aura sa capacité navale réduite de §Y50%§! pour §Y15§! ans. Nous gagnerons également §G100§! en £influence ."
+ war_demand_demilitarize_15_years_tooltip_proper_header:0 "$war_demand_demilitarize_15_years_header$"
+ war_demand_demilitarize_15_years_tooltip_proper_content:1 "$war_demand_demilitarize_15_years_tooltip_content$"
+ # Demilitarize for 30 years
+ war_demand_demilitarize_30_years_header:1 "§HDemilitarisé pour 30 ans§!"
+ war_demand_demilitarize_30_years_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_30_years_tooltip_header:0 "$war_demand_demilitarize_30_years_header$"
+ war_demand_demilitarize_30_years_tooltip_content:2 "[parameter:country.GetName] aura sa capacité navale réduite de §Y50%§! pour §Y30§! ans. Nous gagnerons également §G100§! en £influence ."
+ war_demand_demilitarize_30_years_tooltip_proper_header:0 "$war_demand_demilitarize_30_years_header$"
+ war_demand_demilitarize_30_years_tooltip_proper_content:1 "$war_demand_demilitarize_30_years_tooltip_content$"
+ # Demilitarize Permanently
+ war_demand_demilitarize_permanently_header:1 "§HDémilitarisé en permanence§!"
+ war_demand_demilitarize_permanently_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_permanently_tooltip_header:0 "$war_demand_demilitarize_permanently_header$"
+ war_demand_demilitarize_permanently_tooltip_content:2 "[parameter:country.GetName] aura sa capacité navale réduite de §Y50%§! et deviendra un sujet démilitarisé. Les sujets démilitarisés sont pour la plupart indépendants mais coûtent §R1§! en £influence  par mois et ils sont protégés par leur seigneur."
+ war_demand_demilitarize_permanently_tooltip_proper_header:0 "$war_demand_demilitarize_permanently_header$"
+ war_demand_demilitarize_permanently_tooltip_proper_content:1 "$war_demand_demilitarize_permanently_tooltip_content$"
+ # Custom tooltips
+ war_demand_demilitarize_demilitarized:1 "Cette empire est déjà en voie de démilitarisation"
+ war_demand_demilitarize_independent:1 "Les sujets de l'empires ne peuvent être démilitarisés que par leurs seigneurs"
+ war_demand_demilitarize_requires_independence:1 "Seuls les empires indépendants peuvent faire cette demande"
+ war_demand_demilitarization_already_proposed:1 "Vous proposez déjà la démilitarisation pour cette Empire"
+ war_demand_demilitarize_country_no_planets:1 "Toutes les planètes de l'empire seront cédées, rien ne reste à démilitariser"
+ war_demand_demilitarize_country_not_opponent:1 "Cet empire n'est plus un adversaire"
+ war_demand_demilitarize_country_no_overlords:1 "Personne ne peut prendre cet empire comme sujet démilitarisé"
+ war_demand_demilitarize_country_wrong_type:1 "Les empires de ce type ne peuvent pas être des sujets"
+ war_demand_demilitarize_country_no_vassals_of_vassals:2 "Seuls les empires indépendants sont autorisés à avoir des sujets"
+ # Subject type
+ SUBJECT_demilitarized_subject:0 "Sujet de démilitarisation"
+ SUBJECT_DESC_demilitarized_subject:0 "Les sujets démilitarisés sont pour la plupart indépendants, mais avec une capacité navale considérablement réduite, coutant §R1§! en £influence  par mois et protégés par leur seigneur. Ils peuvent devenir des sujets démilitarisés stable après environ 30 ans de démilitarisation."
+ SUBJECT_stable_demilitarized_subject:0 "Stable sujet démilitarisé"
+ SUBJECT_DESC_stable_demilitarized_subject:0 "Les stables sujets démilitarisés ont une relation longue, forte et confiante avec leur seigneur. Ils paient §Y15%§! de leurs crédits et minéraux mensuels en tribut à leur seigneur et leur donne §G1§! en £influence  mensuelle."
+ # Modifiers
+ forced_demilitarization:0 "Démilitarisation forcée"
+ forced_demilitarization_desc:0 "Nous avons été forcés de diminuer notre capacité navale par un autre empire"
+ permanent_demilitarization_1:0 "Démilitarisation permanente - Force de Police"
+ permanent_demilitarization_1_desc:0 "Notre seigneur nous a forcé à diminuer notre capacité navale, nous permettant de ne maintenir qu'une simple force de police"
+ permanent_demilitarization_2:0 "Démilitarisation permanente - Patrouille frontalière"
+ parmanent_demilitarization_2_desc:0 "Notre seigneur nous a forcé à diminuer notre capacité navale, nous permettant de ne maintenir qu'une simple patrouille frontalière"
+ permanent_demilitarization_3:0 "Démilitarisation permanente - Autodéfense"
+ permanent_demilitarization_3_desc:0 "Notre seigneur nous a forcé à diminuer notre capacité navale, nous permettant de ne maintenir qu'une simple armée d'autodéfense"
+ opinion_stable_relationship:0 "Relation stable"
+ opinion_shaky_relationship:9 "Relation précaire"
+ # Events
+ demilitarize.100.name:0 "Patrouille frontalière"
+ demilitarize.100.desc:0 "Un de nos sujets démilitarisés, [DemilitarizedSubject.GetName], demande notre permission de mettre en place une patrouille frontalière de base. Si nous accordons notre permission à [DemilitarizedSubject.GetAdj] , leur capacité navale sera augmenté de -90% à -75%."
+ demilitarize.100.a:0 "Il a notre permission."
+ demilitarize.100.b:0 "Persuadons-le autrement."
+ demilitarize.100.c:0 "Absolument pas."
+ demilitarize.101.name:0 "Autodéfense"
+ demilitarize.101.desc:0 "Un de nos sujets démilitarisés, [DemilitarizedSubject.GetName], demande notre permission de mettre en place une simple force militaire d'autodéfense . Le [DemilitarizedSubject.GetAdj] affirme qu'en dépit de notre protéction, ils devrait s'autodéfendre contre les éventuels menaces inattendues en mobilisant sa simple force d'intervention. Si nous accordons notre permission à [DemilitarizedSubject.GetAdj]  , leur capacité navale sera augmenté de -75% à -50%."
+ demilitarize.101.a:0 "il a notre permission."
+ demilitarize.101.b:0 "Persuadons-le autrement."
+ demilitarize.101.c:0 "Absolument pas."
+ demilitarize.102.name:0 "Relation stable"
+ demilitarize.102.desc:0 "Après des années sous notre protection, le [DemilitarizedSubject.GetName] est devenu un empire stable. Notre longue relation avec le [DemilitarizedSubject.GetAdj] est maintenant confiant et amical. Après des années de surveillance, nous finissons par récolter les fruits."
+ demilitarize.102.a:0 "C'est un grand jour."
